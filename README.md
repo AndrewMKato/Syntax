@@ -5,3 +5,6 @@ A basic, syntactic generator in English.
 - Allowing for the generation of declarative sentences through X'-Theory.
 - Forming a baseline that will eventually account for basic transformations.
 - Excluding ungrammatical sentences as they arise.
+
+## Attributions
+- The list in nouns.txt is from Desi Quintans at http://www.desiquintans.com/nounlist.
