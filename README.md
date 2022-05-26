@@ -7,4 +7,4 @@ A basic, syntactic generator in English.
 - Excluding ungrammatical sentences as they arise.
 
 ## Attributions
-- The list in nouns.txt is from Desi Quintans at http://www.desiquintans.com/nounlist.
+- The words in nouns.txt are from Desi Quintans at http://www.desiquintans.com/nounlist.
