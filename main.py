@@ -1,20 +1,18 @@
 '''
-Any given node/constituent consists of
-    A lexical category (phrasal or terminal)
+Any given constituent consists of
+    A lexical type (phrasal or terminal)
     A leaf (the actual word)
 
-Lexical category, which has a leaf 
+Lexical type
     Phrase: A head item and its complement items and specifier if any.
-    Terminal category: Singular item that is either a head or complement of a phrase.
+    Terminal type: Singular item that is either a head or complement of a phrase.
 '''
 
+from sentence import Sentence
+
 def main():
-    with open('nouns.txt', 'r') as f:
-        file = f.readlines()
-
-    nounsFile = [i.rstrip() for i in file]
-    
-
+    inputSentence = Sentence(input('Enter a sentence for parsing: ')) # ['harvey', 'likes', 'dogs']
+    print(inputSentence) # Returns str.
 
 if __name__ == "__main__":
     main()

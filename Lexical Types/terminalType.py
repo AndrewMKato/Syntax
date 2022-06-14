@@ -1,6 +1,6 @@
-from lexicalCat import Category
+from lexicalType import LexicalType
 
-class terminalCategory(Category):
+class terminalType(LexicalType):
 
     def __init__(self, phrasalPosition='complement', label='NULL'):
         self.label = label
@@ -20,18 +20,18 @@ class terminalCategory(Category):
             'pronoun': 'Pron'
         }
 
-        # Catches invalid label or phrasal position.
+        # Catch invalid phrasal position or label.
         try:
             assert self.phrasalPosition in self.validPhrasalPositions
 
-        except Exception as phrasalPositionError:
-            print(f'Error: {phrasalPositionError}')
+        except Exception as PhrasalPositionError:
+            print(f'Error: {PhrasalPositionError}')
 
         try:
             assert self.label in self.validTermLabels
 
-        except Exception as labelError:
-            print(f'Error: {labelError}')
+        except Exception as LabelError:
+            print(f'Error: {LabelError}')
 
         
             
