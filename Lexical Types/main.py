@@ -14,6 +14,8 @@ def main():
     inputSentence = Sentence(input('Enter a sentence for parsing: ')) # ['harvey', 'likes', 'dogs']
     print(inputSentence) # Returns str.
 
+    print(inputSentence.associate())
+
 if __name__ == "__main__":
     main()
 

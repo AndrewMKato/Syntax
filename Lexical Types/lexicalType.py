@@ -13,4 +13,4 @@ class LexicalType:
         try:
             assert self.form in self.validForms
         except Exception as FormNameError:
-            print(f'Error: {FormNameError}')
+            print(f'Error: FormNameError')

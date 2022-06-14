@@ -1,6 +1,6 @@
 from lexicalType import LexicalType
 
-class terminalType(LexicalType):
+class TerminalType(LexicalType):
 
     def __init__(self, phrasalPosition='complement', label='NULL'):
         self.label = label
@@ -17,7 +17,9 @@ class terminalType(LexicalType):
             'degree': 'Deg',
             'negation': 'Neg',
             'possessive': 'Poss',
-            'pronoun': 'Pron'
+            'pronoun': 'Pron',
+            'name': 'Name',
+            'NULL': 'NULL'
         }
 
         # Catch invalid phrasal position or label.
@@ -31,7 +33,4 @@ class terminalType(LexicalType):
             assert self.label in self.validTermLabels
 
         except Exception as LabelError:
-            print(f'Error: {LabelError}')
-
-        
-            
+            print(f'Error: LabelError')  
