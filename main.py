@@ -16,3 +16,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+    # Harvey likes dogs. -> "[(NP) [(N) Harvey]] [(VP) [(V) likes] [(N) dogs]]
