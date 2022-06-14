@@ -1,6 +1,7 @@
 from terminalType import TerminalType
 
-def testType(word):
+def findType(word):
+
     with open('nouns.txt', 'r') as f:
         file = f.readlines()
 
@@ -9,7 +10,7 @@ def testType(word):
     with open('names.txt', 'r') as f:
         file = f.readlines()
 
-        namesFile = [i.rstrip() for i in file]
+        namesFile = [i.rstrip().lower() for i in file]
 
     if word in nounsFile:
         word = TerminalType(label='N')

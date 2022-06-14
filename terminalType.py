@@ -25,12 +25,10 @@ class TerminalType(LexicalType):
         # Catch invalid phrasal position or label.
         try:
             assert self.phrasalPosition in self.validPhrasalPositions
-
-        except Exception as PhrasalPositionError:
-            print(f'Error: {PhrasalPositionError}')
+        except Exception:
+            print(f'Error: PhrasalPositionError')
 
         try:
-            assert self.label in self.validTermLabels
-
-        except Exception as LabelError:
-            print(f'Error: LabelError')  
+            assert self.label in self.validTermLabels.values()
+        except Exception:
+            print(f'Error: TerminalLabelError')  

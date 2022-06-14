@@ -11,12 +11,19 @@ Lexical type
 from sentence import Sentence
 
 def main():
-    inputSentence = Sentence(input('Enter a sentence for parsing: ')) # ['harvey', 'likes', 'dogs']
-    print(inputSentence) # Returns str.
+    inputSentence = Sentence(input('Enter a sentence for parsing: ')) # ['harvey', 'loves', 'dogs']
+    print(inputSentence)
 
-    print(inputSentence.associate())
+    inputSentence = inputSentence.associate() # {'harvey': 'Name', 'loves': 'NULL', 'dogs': 'NULL'}
+    print(inputSentence) 
+
+
+
+
+
+
 
 if __name__ == "__main__":
     main()
 
-    # Harvey likes dogs. -> "[(NP) [(N) Harvey]] [(VP) [(V) likes] [(N) dogs]]
+    # GOAL: Harvey likes dogs. -> "[(NP) [(Name) Harvey]] [(VP) [(V) likes] [(N) dogs]]
