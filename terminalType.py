@@ -14,11 +14,11 @@ class TerminalType(LexicalType):
             'determiner': 'D',
             'complementizer': 'C',
             'preposition': 'P',
-            'degree': 'Deg',
-            'negation': 'Neg',
-            'possessive': 'Poss',
-            'pronoun': 'Pron',
-            'name': 'Name',
+            'degree': 'DEG',
+            'negation': 'NEG',
+            'possessive': 'POSS',
+            'pronoun': 'PROM',
+            'name': 'NAME',
             'NULL': 'NULL'
         }
 

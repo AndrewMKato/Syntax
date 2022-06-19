@@ -14,6 +14,7 @@ def main():
     inputSentence = Sentence(input('Enter a sentence for parsing: ')) # ['harvey', 'loves', 'dogs']
     print(inputSentence)
 
+    # associate() is a method of the Sentence class.
     inputSentence = inputSentence.associate() # {'harvey': 'Name', 'loves': 'NULL', 'dogs': 'NULL'}
     print(inputSentence) 
 
@@ -26,4 +27,6 @@ def main():
 if __name__ == "__main__":
     main()
 
-    # GOAL: Harvey likes dogs. -> "[(NP) [(Name) Harvey]] [(VP) [(V) likes] [(N) dogs]]
+    # GOAL: Harvey loves dogs. -> [(NP) N.Harvey] [(M') M.NULL [(VP) V.loves [(NP) N.dogs]]].
+
+    # GOAL: The green goblin loves eating apples. -> [(NP) [(DP) D.The [AP A.green]] N.goblin] [(M') M.NULL [(VP) V.loves [(VP) V.eating [(NP) N.apples]]]].
