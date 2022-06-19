@@ -1,22 +1,20 @@
 '''
-Any given constituent consists of
-    A lexical type (phrasal or terminal)
-    A leaf (the actual word)
+This parser focuses on general constituent identification.
+Attention will be primarily given to finding and labeling phrasal constituents, i.e. NPs, VPs, etc.
 
-Lexical type
-    Phrase: A head item and its complement items and specifier if any.
-    Terminal type: Singular item that is either a head or complement of a phrase.
+A sentence has phrasal constituents (phrases).
+Phrases have terminal constituents (individual words).
+Both phrases and terminal constituents should subclasses of a constituent superclass.
 '''
 
 from sentence import Sentence
 
 def main():
-    inputSentence = Sentence(input('Enter a sentence for parsing: ')) # ['harvey', 'loves', 'dogs']
-    print(inputSentence)
+    input_sentence = Sentence(input('Enter a sentence for parsing: ')) # ['harvey', 'loves', 'dogs']
+    print(input_sentence)
 
-    # associate() is a method of the Sentence class.
-    inputSentence = inputSentence.associate() # {'harvey': 'Name', 'loves': 'NULL', 'dogs': 'NULL'}
-    print(inputSentence) 
+    input_sentence = input_sentence.associate() # {'harvey': 'Name', 'loves': 'NULL', 'dogs': 'NULL'}
+    print(input_sentence) 
 
 
 
