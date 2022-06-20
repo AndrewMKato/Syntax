@@ -1,4 +1,4 @@
-from lexicaltypes.terminal_type import TerminalType
+from lexicaltypes.phrase_type import TerminalType
 
 def find_type(word):
     ''' Finds the terminal type of the word given as input. '''
@@ -15,6 +15,10 @@ def find_type(word):
     with open('adjectives.txt', 'r') as f:
         file = f.readlines()
         adjectives_file = [i.rstrip().lower() for i in file]
+    
+    with open('modals.txt', 'r') as f:
+        file = f.readlines()
+        modals_file = [i.rstrip().lower() for i in file]
 
     if word in nouns_file:
         word = TerminalType(label='N')
@@ -22,6 +26,8 @@ def find_type(word):
         word = TerminalType(label='NAME')
     elif word in adjectives_file:
         word = TerminalType(label='A')
+    elif word in modals_file:
+        word = TerminalType(label='M')
     else:
         word = TerminalType() # word becomes a TerminalType with label 'NULL'.
         
